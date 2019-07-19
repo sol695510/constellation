@@ -71,8 +71,121 @@
         <get src="https://github.com/rsabhi/NBhelp/raw/master/jhall-2.0_05.jar"
              dest="${nbplatform.default.netbeans.dest.dir}/platform/modules/ext/" usetimestamp="true"/>
     </target>
-  	
-    <target name="download-dependencies" depends="-load-ivy-tasks,-download-unfolding-maps,-download-javahelp-file,-download-javahelp-indexfile"
+    
+    <target name="-download-glugen-jars" >
+        <mkdir dir="${ivy.lib.dir}"/>
+        <echo message="installing gluegen jar files..."/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/gluegen.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/gluegen-rt-natives-linux-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/gluegen-rt-natives-macosx-universal.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/gluegen-rt-natives-windows-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/gluegen-rt.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+    </target>
+    <target name="-download-joal-jars" >
+        <mkdir dir="${ivy.lib.dir}"/>
+        <echo message="installing joal jar files..."/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/joal-natives-linux-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/joal-natives-macosx-universal.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/joal-natives-windows-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/joal.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+    </target>
+    <target name="-download-jocl-jars" >
+        <mkdir dir="${ivy.lib.dir}"/>
+        <echo message="installing jocl jar files..."/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jocl-natives-linux-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jocl-natives-macosx-universal.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jocl-natives-windows-amd64.jar"
+            dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jocl.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+    </target>
+    <target name="-download-jogl-all-jars" >
+        <mkdir dir="${ivy.lib.dir}"/>
+        <echo message="installing jogl-all jar files..."/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl-all-natives-linux-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl-all-natives-macosx-universal.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl-all-natives-windows-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl-all.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+    </target>
+    <target name="-download-jogl-jars" >
+        <mkdir dir="${ivy.lib.dir}"/>
+        <echo message="installing jogl jar files..."/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl-natives-linux-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl-natives-macosx-universal.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl-natives-windows-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/jogl-awt.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+    </target>
+    <target name="-download-newt-driver-jars" >
+        <mkdir dir="${ivy.lib.dir}"/>
+        <echo message="installing jogl jar files..."/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/newt.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/newt-driver-linux.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/newt-driver-osx.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/newt-driver-win.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/newt-natives-windows-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/newt-natives-macosx-universal.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/newt-natives-linux-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+    </target>
+    <target name="-download-nativewindow-jars" >
+        <mkdir dir="${ivy.lib.dir}"/>
+        <echo message="installing jogl jar files..."/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/nativewindow.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/nativewindow-natives-linux-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/nativewindow-natives-macosx-universal.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/nativewindow-natives-windows-amd64.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/nativewindow-os-win.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/nativewindow-os-osx.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+        <get src="https://github.com/rsabhi/jogl-glugen/raw/master/nativewindow-awt.jar"
+             dest="${ivy.lib.dir}" usetimestamp="true"/>
+    </target>
+   
+    <target name="download-dependencies" 
+            depends="
+                    -download-unfolding-maps,
+                    -load-ivy-tasks,
+                    -download-javahelp-file,
+                    -download-javahelp-indexfile,
+                    -download-glugen-jars,
+                    -download-joal-jars,
+                    -download-jocl-jars,
+                    -download-jogl-all-jars,
+                    -download-jogl-jars,
+                    -download-newt-driver-jars,
+                    -download-nativewindow-jars" 
             description="Download dependent libraries.">
         <ivy:resolve/>
         <ivy:retrieve/>

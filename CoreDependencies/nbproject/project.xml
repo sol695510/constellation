@@ -1444,8 +1444,8 @@
                 <binary-origin>release/modules/ext/json-simple-1.1.1.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/jogl-2.3.2.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/jogl-2.3.2.jar</binary-origin>
+                <runtime-relative-path>ext/jogl.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/stax-api-1.0.1.jar</runtime-relative-path>
@@ -1572,8 +1572,8 @@
                 <binary-origin>release/modules/ext/gt-shapefile-17.1.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/gluegen-rt-2.3.2.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/gluegen-rt-2.3.2.jar</binary-origin>
+                <runtime-relative-path>ext/gluegen-rt.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/ejml-simple-0.31.jar</runtime-relative-path>
@@ -1584,12 +1584,12 @@
                 <binary-origin>release/modules/ext/gt-jdbc-17.1.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/jocl-2.3.2.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/jocl-2.3.2.jar</binary-origin>
+                <runtime-relative-path>ext/jocl.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jocl.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/jogl-all-2.3.2.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/jogl-all-2.3.2.jar</binary-origin>
+                <runtime-relative-path>ext/jogl-all.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/jogl-all.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/qdox-1.12.1.jar</runtime-relative-path>
@@ -1624,8 +1624,8 @@
                 <binary-origin>release/modules/ext/hsqldb-2.3.0.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/gluegen-rt-2.3.2-natives-windows-i586.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/gluegen-rt-2.3.2-natives-windows-i586.jar</binary-origin>
+                <runtime-relative-path>ext/gluegen-rt-natives-windows-amd64.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/gluegen-rt-natives-windows-amd64.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/unfolding-master-20171010.jar</runtime-relative-path>
